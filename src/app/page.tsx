@@ -1,3 +1,5 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import { Search, MessageCircle, Bell, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Home() {
@@ -9,9 +11,9 @@ export default function Home() {
         <div className="relative h-22 flex items-center justify-between px-5 py-4">
           {/* Logo Container */}
           <div className="flex-1 flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <div className="w-10 h-10 bg-white rounded-sm overflow-hidden flex items-center justify-center">
-                <img 
+                <Image 
                   src="https://substackcdn.com/image/fetch/$s_!jMoJ!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed63687-d4bc-401d-bf8a-f7b2e64e8322_1080x1080.png"
                   alt="Portfolio Logo"
                   width={40}
@@ -19,19 +21,21 @@ export default function Home() {
                   className="w-10 h-10 object-cover"
                 />
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Title Container */}
           <div className="flex-shrink-0">
             <h1 className="text-xl font-semibold">
-              <a href="/" className="block">
-                <img 
+              <Link href="/" className="block">
+                <Image 
                   alt="Your Portfolio"
                   src="https://substackcdn.com/image/fetch/$s_!01R7!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1de2d244-0740-47dc-a251-78d3f27e08c0_801x262.png"
+                  width={110}
+                  height={36}
                   className="block h-9"
                 />
-              </a>
+              </Link>
             </h1>
           </div>
 
@@ -67,7 +71,7 @@ export default function Home() {
                 className="relative ml-2"
               >
                 <div className="w-10 h-10 bg-gray-200 rounded-full overflow-hidden border border-gray-300">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/$s_!P1eg!,w_40,h_40,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1eb53d4b-535b-4ec4-90e1-e645ad361edc_2048x2048.png"
                     alt="Profile"
                     width={40}
@@ -90,36 +94,36 @@ export default function Home() {
           <div className="h-12 px-1 flex items-center justify-center relative">
             <div className="flex items-center">
               <div className="flex">
-                <a 
+                <Link 
                   href="/" 
                   className="px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-gray-900"
                 >
                   Home
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/notes" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Notes
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/portfolio" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Portfolio
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/archive" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Archive
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/about" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -151,9 +155,11 @@ export default function Home() {
             <article className="lg:col-span-2 bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow p-2">
               <div className="flex flex-col">
                 <div className="aspect-[1.5] bg-gray-100 rounded mb-4">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/w_1250,h_833,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb1b92d26-c17b-4dec-a458-1d4f24b4986d_735x728.jpeg"
                     alt="A Smile well Done"
+                    width={1250}
+                    height={833}
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -194,9 +200,11 @@ export default function Home() {
             <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow p-2">
               <div className="flex flex-col gap-3">
                 <div className="aspect-[1.5] bg-gray-100 rounded">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/w_600,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F4dbd5c39-03a5-4547-ae8a-86ecaa1db984_736x517.jpeg"
                     alt="His void"
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -234,9 +242,11 @@ export default function Home() {
             <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow p-2">
               <div className="flex flex-col gap-3">
                 <div className="aspect-[1.5] bg-gray-100 rounded">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/w_600,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F280fb921-3e19-4762-9324-6ea6066502db_736x981.jpeg"
                     alt="Her Void"
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -274,9 +284,11 @@ export default function Home() {
             <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow p-2">
               <div className="flex flex-col gap-3">
                 <div className="aspect-[1.5] bg-gray-100 rounded">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/w_600,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F31884a0f-2f1a-47f2-b3d8-b02f9d56a5e7_736x736.jpeg"
                     alt="A life"
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -314,9 +326,11 @@ export default function Home() {
             <article className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:shadow-md transition-shadow p-2">
               <div className="flex flex-col gap-3">
                 <div className="aspect-[1.5] bg-gray-100 rounded">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/w_600,h_400,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe48150e8-5643-409b-b1e9-5daba45b3571_657x920.jpeg"
                     alt="A cup of milk tea"
+                    width={600}
+                    height={400}
                     className="w-full h-full object-cover rounded"
                   />
                 </div>
@@ -358,9 +372,9 @@ export default function Home() {
           <div className="mb-8">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg font-semibold text-gray-900">Most Popular</h2>
-              <a href="/archive?sort=top" className="text-xs text-gray-500 uppercase tracking-wider hover:text-gray-700">
+              <Link href="/archive?sort=top" className="text-xs text-gray-500 uppercase tracking-wider hover:text-gray-700">
                 View all
-              </a>
+              </Link>
             </div>
 
             {/* Popular Posts Grid */}
@@ -377,9 +391,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-12 h-12 bg-gray-100 rounded overflow-hidden flex-shrink-0">
-                    <img 
+                    <Image 
                       src="https://substackcdn.com/image/fetch/w_150,h_150,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3bae30f9-5d35-4c57-b195-7c6cb961506d_1600x1200.jpeg"
                       alt="Drumrolls for November!"
+                      width={150}
+                      height={150}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -417,9 +433,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-12 h-12 bg-gray-100 rounded overflow-hidden flex-shrink-0">
-                    <img 
+                    <Image 
                       src="https://substackcdn.com/image/fetch/w_150,h_150,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F3393db93-8eac-4dd3-a375-be0f5eebdc7c_721x690.png"
                       alt="Rishab Academy Un-wrapped"
+                      width={150}
+                      height={150}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -457,9 +475,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-12 h-12 bg-gray-100 rounded overflow-hidden flex-shrink-0">
-                    <img 
+                    <Image 
                       src="https://substackcdn.com/image/fetch/w_150,h_150,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff705c049-9392-48ce-9594-54f6162d8540_664x664.jpeg"
                       alt="The little Plant"
+                      width={150}
+                      height={150}
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -496,9 +516,11 @@ export default function Home() {
                     </div>
                   </div>
                   <div className="w-12 h-12 bg-gray-100 rounded overflow-hidden flex-shrink-0">
-                    <img 
+                    <Image 
                       src="https://substackcdn.com/image/fetch/w_150,h_150,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe8cfa081-7631-4689-a2bc-a90484257991_1200x1600.jpeg"
                       alt="How I Study 15-Hours A Day"
+                      width={150}
+                      height={150}
                       className="w-full h-full object-cover"
                     />
                   </div>

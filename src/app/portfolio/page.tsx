@@ -1,4 +1,6 @@
 import { Search, MessageCircle, Bell, ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Portfolio() {
   return (
@@ -9,9 +11,9 @@ export default function Portfolio() {
         <div className="relative h-22 flex items-center justify-between px-5 py-4">
           {/* Logo Container */}
           <div className="flex-1 flex-shrink-0">
-            <a href="/" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <div className="w-10 h-10 bg-white rounded-sm overflow-hidden flex items-center justify-center">
-                <img 
+                <Image 
                   src="https://substackcdn.com/image/fetch/$s_!jMoJ!,w_80,h_80,c_fill,f_auto,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F8ed63687-d4bc-401d-bf8a-f7b2e64e8322_1080x1080.png"
                   alt="Portfolio Logo"
                   width={40}
@@ -19,19 +21,21 @@ export default function Portfolio() {
                   className="w-10 h-10 object-cover"
                 />
               </div>
-            </a>
+            </Link>
           </div>
 
           {/* Title Container */}
           <div className="flex-shrink-0">
             <h1 className="text-xl font-semibold">
-              <a href="/" className="block">
-                <img 
+              <Link href="/" className="block">
+                <Image 
                   alt="Your Portfolio"
                   src="https://substackcdn.com/image/fetch/$s_!01R7!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1de2d244-0740-47dc-a251-78d3f27e08c0_801x262.png"
+                  width={110}
+                  height={36}
                   className="block h-9"
                 />
-              </a>
+              </Link>
             </h1>
           </div>
 
@@ -67,7 +71,7 @@ export default function Portfolio() {
                 className="relative ml-2"
               >
                 <div className="w-10 h-10 bg-gray-200 rounded-full overflow-hidden border border-gray-300">
-                  <img 
+                  <Image 
                     src="https://substackcdn.com/image/fetch/$s_!P1eg!,w_40,h_40,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1eb53d4b-535b-4ec4-90e1-e645ad361edc_2048x2048.png"
                     alt="Profile"
                     width={40}
@@ -90,36 +94,36 @@ export default function Portfolio() {
           <div className="h-12 px-1 flex items-center justify-center relative">
             <div className="flex items-center">
               <div className="flex">
-                <a 
+                <Link 
                   href="/" 
                   className="px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-gray-900"
                 >
                   Home
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/notes" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Notes
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/portfolio" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Portfolio
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/archive" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Archive
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/about" 
                   className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   About
-                </a>
+                </Link>
               </div>
             </div>
             
@@ -145,7 +149,7 @@ export default function Portfolio() {
         <div className="max-w-4xl mx-auto px-4 py-8">
           <h2 className="text-3xl font-bold text-gray-800 mb-4">Welcome to My Portfolio</h2>
           <p className="text-gray-600 text-lg leading-relaxed">
-            A space of peace and creativity, where green represents nature's calm, 
+            A space of peace and creativity, where green represents nature&apos;s calm, 
             yellow brings joy and success, and blue adds depth and contemplation. 
             Together they create absolute peace - a sanctuary for those who seek harmony.
           </p>
