@@ -1,6 +1,11 @@
-export default function Portfolio() {
+import BrutalistNavigation from "@/components/BrutalistNavigation";
+
+export default function Projects() {
   return (
     <div className="min-h-screen flex flex-col border-[3px] border-black">
+      {/* Brutalist Navigation */}
+      <BrutalistNavigation pageColor="projects" />
+      
       {/* Header */}
       <div className="w-full h-[100px] bg-[#B3D1E3] border-b-[3px] border-black flex items-center pl-8">
         <h1 className="text-white font-zen-antique text-5xl font-normal">Projects</h1>

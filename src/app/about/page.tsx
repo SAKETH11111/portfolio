@@ -1,8 +1,12 @@
 import Image from "next/image";
+import BrutalistNavigation from "@/components/BrutalistNavigation";
 
 export default function About() {
   return (
     <div className="min-h-screen flex flex-col border-[3px] border-black">
+      {/* Brutalist Navigation */}
+      <BrutalistNavigation pageColor="about" />
+      
       {/* Header */}
       <div className="w-full h-[100px] bg-[#E8C5C5] border-b-[3px] border-black flex items-center pl-8">
         <h1 className="text-black font-zen-antique text-5xl font-normal">About</h1>

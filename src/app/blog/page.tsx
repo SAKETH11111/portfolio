@@ -39,35 +39,35 @@ export default function Home() {
           <div className="h-12 px-1 flex items-center justify-center relative overflow-x-auto">
             <div className="flex items-center">
               <div className="flex whitespace-nowrap">
-                <Link 
-                  href="/" 
-                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-gray-900"
+                <Link
+                  href="/"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   Home
                 </Link>
-                <Link 
-                  href="/notes" 
-                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Notes
-                </Link>
-                <Link 
-                  href="/portfolio" 
-                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Portfolio
-                </Link>
-                <Link 
-                  href="/archive" 
-                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
-                >
-                  Archive
-                </Link>
-                <Link 
-                  href="/about" 
+                <Link
+                  href="/about"
                   className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
                 >
                   About
+                </Link>
+                <Link
+                  href="/projects"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/blog"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-gray-900"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Contact
                 </Link>
               </div>
             </div>
