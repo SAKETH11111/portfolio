@@ -15,15 +15,19 @@ export default function About() {
       {/* Content Area */}
       <div className="flex flex-1">
         {/* Left Section */}
-        <div
-          className="w-[45%] border-r-[3px] border-black p-8 relative bg-cover bg-center"
-          style={{ backgroundImage: "url('/images/pfp.jpeg')" }}
-        >
-          {/* Two circles - with a slight background to make them visible against the image */}
-          <div className="flex gap-4 mt-5 relative z-10">
-            <div className="w-12 h-12 rounded-full border-[3px] border-black bg-white bg-opacity-50"></div>
-            <div className="w-12 h-12 rounded-full border-[3px] border-black bg-white bg-opacity-50"></div>
+        <div className="w-[45%] border-r-[3px] border-black flex flex-col">
+          {/* Top part with circles and line */}
+          <div className="bg-gray-200 p-8 relative border-b-[3px] border-black">
+            <div className="flex gap-4">
+              <div className="w-12 h-12 rounded-full border-[3px] border-black bg-white"></div>
+              <div className="w-12 h-12 rounded-full border-[3px] border-black bg-white"></div>
+            </div>
           </div>
+          {/* Image part */}
+          <div
+            className="flex-1 bg-cover bg-center"
+            style={{ backgroundImage: "url('/images/pfp.jpeg')" }}
+          ></div>
         </div>
 
         {/* Right Section */}

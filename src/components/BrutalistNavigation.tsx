@@ -25,13 +25,13 @@ export default function BrutalistNavigation({ pageColor }: BrutalistNavigationPr
   
   const getBgColor = () => {
     if (pageColor === 'about') return 'bg-[#E8C5C5]';
-    if (pageColor === 'contact') return 'bg-[#C8E6C9]';
+    if (pageColor === 'contact') return 'bg-yellow-200';
     return 'bg-[#B3D1E3]'; // projects
   };
   
   const getActiveColor = () => {
     if (pageColor === 'about') return 'bg-[#D1A8A8]';
-    if (pageColor === 'contact') return 'bg-[#A8D1AB]';
+    if (pageColor === 'contact') return 'bg-yellow-300';
     return 'bg-[#9BB8CC]'; // projects
   };
 

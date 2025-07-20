@@ -2,7 +2,7 @@ import BrutalistNavigation from "../../components/BrutalistNavigation";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#C8E6C9]">
+    <div className="min-h-screen bg-[#F9F9AF]">
       <BrutalistNavigation pageColor="contact" />
       
       <main className="pt-32 px-4 sm:px-6 lg:px-8">
