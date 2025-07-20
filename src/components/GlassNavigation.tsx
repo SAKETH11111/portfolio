@@ -16,7 +16,7 @@ const navItems: NavItem[] = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export default function GlassNavigation() {
+export default function GlassNavigation({ className }: { className?: string }) {
   const [activeItem, setActiveItem] = useState<string>('');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -80,7 +80,7 @@ export default function GlassNavigation() {
       </svg>
 
       {/* Desktop & Tablet Liquid Glass Navigation */}
-      <nav className="liquid-glass-nav hidden md:block">
+      <nav className={`liquid-glass-nav hidden md:block ${className || ''}`}>
         <div className="liquid-glass-container">
           <ul className="flex items-center">
             {navItems.map((item, index) => (
@@ -104,7 +104,7 @@ export default function GlassNavigation() {
       </nav>
 
       {/* Mobile Liquid Glass Navigation */}
-      <nav className="liquid-glass-nav-mobile md:hidden">
+      <nav className={`liquid-glass-nav-mobile md:hidden ${className || ''}`}>
         {/* Mobile Menu Button */}
         <div className="liquid-glass-container-mobile">
           <button
