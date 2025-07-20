@@ -3,9 +3,9 @@ import BrutalistNavigation from "../../components/BrutalistNavigation";
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[#C8E6C9]">
-      <BrutalistNavigation pageColor="projects" />
+      <BrutalistNavigation pageColor="contact" />
       
-      <main className="pt-20 px-4 sm:px-6 lg:px-8">
+      <main className="pt-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Header Section */}
           <div className="text-center mb-12">
@@ -14,7 +14,7 @@ export default function Contact() {
             </h1>
             <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
             <p className="text-xl text-gray-800 max-w-2xl mx-auto">
-              Let's connect and create something meaningful together
+              Let&apos;s connect and create something meaningful together
             </p>
           </div>
 
@@ -138,10 +138,10 @@ export default function Contact() {
 
           {/* Call to Action */}
           <div className="text-center bg-white/30 backdrop-blur-sm border-2 border-black p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h2 className="text-3xl font-bold text-black mb-4">LET'S COLLABORATE</h2>
+            <h2 className="text-3xl font-bold text-black mb-4">LET&apos;S COLLABORATE</h2>
             <p className="text-lg text-gray-800 mb-6 max-w-2xl mx-auto">
               Whether you have a project in mind, want to discuss ideas, or just want to say hello, 
-              I'd love to hear from you. Every great conversation starts with a simple message.
+              I&apos;d love to hear from you. Every great conversation starts with a simple message.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

@@ -17,18 +17,22 @@ const navItems: NavItem[] = [
 ];
 
 interface BrutalistNavigationProps {
-  pageColor: 'about' | 'projects';
+  pageColor: 'about' | 'projects' | 'contact';
 }
 
 export default function BrutalistNavigation({ pageColor }: BrutalistNavigationProps) {
   const pathname = usePathname();
   
   const getBgColor = () => {
-    return pageColor === 'about' ? 'bg-[#E8C5C5]' : 'bg-[#B3D1E3]';
+    if (pageColor === 'about') return 'bg-[#E8C5C5]';
+    if (pageColor === 'contact') return 'bg-[#C8E6C9]';
+    return 'bg-[#B3D1E3]'; // projects
   };
   
   const getActiveColor = () => {
-    return pageColor === 'about' ? 'bg-[#D1A8A8]' : 'bg-[#9BB8CC]';
+    if (pageColor === 'about') return 'bg-[#D1A8A8]';
+    if (pageColor === 'contact') return 'bg-[#A8D1AB]';
+    return 'bg-[#9BB8CC]'; // projects
   };
 
   return (
