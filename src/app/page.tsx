@@ -9,42 +9,48 @@ export default function Home() {
         <Image
           src="/images/hero-background.png"
           alt="Hero background"
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-          style={{ opacity: 0.95 }}
+          fill
+          sizes="100vw"
+          style={{ 
+            objectFit: 'cover',
+            objectPosition: 'center',
+            opacity: 0.95 
+          }}
           draggable={false}
           priority
         />
         <div className="absolute border border-[#effdfa] border-solid inset-0 pointer-events-none" />
       </div>
 
-      {/* Glass Navigation Component */}
+      {/* Navigation Component */}
       <GlassNavigation />
 
       {/* Main Content */}
-      <main className="relative z-10 flex items-center justify-center min-h-screen px-6 pt-0">
-        <div className="text-center max-w-4xl mx-auto">
+      <main className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-20 md:pt-24">
+        <div className="text-center max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto">
           {/* Small indicator/badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8">
-            <div className="w-2 h-2 bg-pink-300 rounded-full"></div>
-            <span className="text-white/80 text-sm font-medium">Rudaiba Tarannum</span>
+          <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-3 py-2 sm:px-4 sm:py-2 mb-6 sm:mb-8">
+            <div className="w-2 h-2 bg-pink-300 rounded-full flex-shrink-0"></div>
+            <span className="text-white/80 text-xs sm:text-sm font-medium font-system">Rudaiba Tarannum</span>
           </div>
 
-          {/* Main Title */}
-          <div style={{width: '100%', height: '100%', textAlign: 'center', justifyContent: 'center', display: 'flex', flexDirection: 'column', color: '#D5CEA5', fontSize: 69, fontFamily: 'Zen Antique Soft', fontWeight: '400', wordWrap: 'break-word'}}>Rudaiba Tarannum</div>
+          {/* Main Title - Responsive Typography */}
+          <h1 className="font-zen-antique font-normal text-center mb-4 sm:mb-6 leading-tight" 
+              style={{ 
+                color: '#D5CEA5',
+                textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
+                fontSize: 'clamp(2rem, 8vw, 4.5rem)'
+              }}>
+            Rudaiba Tarannum
+          </h1>
 
-          {/* Subtitle */}
-          <p
-            className="font-normal text-center"
-            style={{
-              fontFamily: "'Zen Antique Soft', serif",
-              fontSize: 30,
-              lineHeight: "1.4",
-              color: "#FFFEF6",
-              textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
-            }}
-          >
+          {/* Subtitle - Responsive Typography */}
+          <p className="font-zen-antique font-normal text-center leading-relaxed px-4 sm:px-0"
+             style={{
+               color: "#FFFEF6",
+               textShadow: "1px 1px 2px rgba(0,0,0,0.5)",
+               fontSize: 'clamp(1rem, 4vw, 2rem)'
+             }}>
             A drifting mind, a blooming world
           </p>
         </div>
