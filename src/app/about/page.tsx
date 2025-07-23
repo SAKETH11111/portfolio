@@ -7,22 +7,10 @@ export default function About() {
       {/* Brutalist Navigation */}
       <BrutalistNavigation pageColor="about" />
       
-      {/* Header */}
-      <div className="w-full h-[100px] bg-[#E8C5C5] border-b-[3px] border-black flex items-center pl-8">
-        <h1 className="text-black font-zen-antique text-5xl font-normal">About</h1>
-      </div>
-
       {/* Content Area */}
       <div className="flex flex-1">
         {/* Left Section */}
         <div className="w-[45%] border-r-[3px] border-black flex flex-col">
-          {/* Top part with circles and line */}
-          <div className="bg-gray-200 p-8 relative border-b-[3px] border-black">
-            <div className="flex gap-4">
-              <div className="w-12 h-12 rounded-full border-[3px] border-black bg-white"></div>
-              <div className="w-12 h-12 rounded-full border-[3px] border-black bg-white"></div>
-            </div>
-          </div>
           {/* Image part */}
           <div
             className="flex-1 bg-cover bg-center"
@@ -31,7 +19,7 @@ export default function About() {
         </div>
 
         {/* Right Section */}
-        <div className="w-[55%] bg-[#E8C5C5] flex items-center justify-center p-16">
+        <div className="w-[55%] bg-[#FFEFF3] flex items-center justify-center p-16">
           <div className="max-w-2xl">
             {/* Subtitle */}
             <p className="text-black font-spectral text-lg mb-4">
