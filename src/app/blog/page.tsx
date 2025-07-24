@@ -1,38 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Search, MessageCircle, Bell, ChevronLeft, ChevronRight } from 'lucide-react';
-import GlassNavigation from '@/components/GlassNavigation';
+import SubstackNavigation from '@/components/SubstackNavigation';
 
 export default function BlogPage() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#EFFDFA' }}>
-      {/* Fixed Header */}
-      <div className="fixed w-full top-0 z-50" style={{ backgroundColor: '#EFFDFA' }}>
-        {/* Top Bar */}
-        <div className="relative h-22 flex items-center justify-between px-2 sm:px-5 py-4">
-          <div className="flex-1 flex-shrink-0"></div>
-          <div className="flex-shrink-0 hidden sm:block">
-            <h1 className="text-xl font-semibold">
-              <Link href="/" className="block">
-                <Image 
-                  alt="Rudaiba's Thoughts"
-                  src="https://substackcdn.com/image/fetch/$s_!01R7!,e_trim:10:white/e_trim:10:transparent/h_72,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F1de2d244-0740-47dc-a251-78d3f27e08c0_801x262.png"
-                  width={72}
-                  height={36}
-                  className="block"
-                  style={{ height: '36px' }}
-                />
-              </Link>
-            </h1>
-          </div>
-          <div className="flex-1 flex justify-end"></div>
-        </div>
-
-        {/* Navigation Bar */}
-        <div>
-          <GlassNavigation className="light-bg" />
-        </div>
-      </div>
+      <SubstackNavigation currentPage="blog" />
 
       {/* Main Content - with top margin to account for fixed header */}
       <div style={{ paddingTop: '120px' }}>

@@ -1,12 +1,84 @@
-import BrutalistNavigation from "../../components/BrutalistNavigation";
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Contact() {
   return (
     <div className="min-h-screen bg-[#F9F9AF]">
-      <BrutalistNavigation pageColor="contact" />
-      
-      <main className="pt-32 px-4 sm:px-6 lg:px-8">
+      {/* Navigation - Fixed at top like blog page */}
+      <div className="fixed w-full top-0 z-50 bg-[#F9F9AF]">
+        {/* Top Bar */}
+        <div className="relative h-22 flex items-center justify-between px-2 sm:px-5 py-4">
+          {/* Logo Container */}
+          <div className="flex-1 flex-shrink-0">
+          </div>
+
+          {/* Title Container - Empty for contact */}
+          <div className="flex-shrink-0 hidden sm:block">
+          </div>
+
+          {/* Buttons Container */}
+          <div className="flex-1 flex justify-end">
+          </div>
+        </div>
+
+        {/* Navigation Bar */}
+        <div className="border-t border-b border-gray-200">
+          <div className="h-12 px-1 flex items-center justify-center relative overflow-x-auto">
+            <div className="flex items-center">
+              <div className="flex whitespace-nowrap">
+                <Link 
+                  href="/" 
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Home
+                </Link>
+                <Link 
+                  href="/blog" 
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Blog
+                </Link>
+                <Link 
+                  href="/projects" 
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  Projects
+                </Link>
+                <Link 
+                  href="/about" 
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  About
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-gray-900 transition-colors"
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+            
+            {/* Left scroll button */}
+            <div className="absolute left-1 top-1/2 transform -translate-y-1/2 sm:hidden">
+              <button className="p-1 hover:bg-gray-100 rounded">
+                <ChevronLeft size={16} className="text-gray-600" />
+              </button>
+            </div>
+            
+            {/* Right scroll button */}
+            <div className="absolute right-1 top-1/2 transform -translate-y-1/2 sm:hidden">
+              <button className="p-1 hover:bg-gray-100 rounded">
+                <ChevronRight size={16} className="text-gray-600" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main className="px-4 sm:px-6 lg:px-8" style={{ paddingTop: '150px' }}>
         <div className="max-w-4xl mx-auto">
+
           {/* Header Section */}
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-4">

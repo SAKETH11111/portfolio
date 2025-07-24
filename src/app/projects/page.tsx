@@ -1,3 +1,6 @@
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+
 export default function Projects() {
   const projects = [
     {
@@ -8,23 +11,92 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Title", 
+      title: "Title",
       subtitle: "Project Resources",
       image: "/images/sewing-room.jpg",
     },
     {
       id: 3,
       title: "Title",
-      subtitle: "Project Resources", 
+      subtitle: "Project Resources",
       image: "/images/sewing-room.jpg",
     },
   ];
 
   return (
     <div className="min-h-screen bg-[#00011C] flex flex-col">
-      {/* Page Title - Space for navbar */}
-      <div className="pt-24 pb-8 px-4 md:px-8">
-        <h1 className="text-[#D5CEA5] font-zen-antique text-8xl md:text-9xl lg:text-[12rem]">
+      {/* Navigation - Exact same structure as blog page */}
+      <div className="fixed w-full top-0 z-50 bg-[#00011C]">
+        {/* Top Bar */}
+        <div className="relative h-22 flex items-center justify-between px-2 sm:px-5 py-4">
+          {/* Logo Container */}
+          <div className="flex-1 flex-shrink-0"></div>
+
+          {/* Title Container - Empty for projects */}
+          <div className="flex-shrink-0 hidden sm:block"></div>
+
+          {/* Buttons Container */}
+          <div className="flex-1 flex justify-end"></div>
+        </div>
+
+        {/* Navigation Bar */}
+        <div className="border-t border-b border-gray-600">
+          <div className="h-12 px-1 flex items-center justify-center relative overflow-x-auto">
+            <div className="flex items-center">
+              <div className="flex whitespace-nowrap">
+                <Link
+                  href="/"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="/blog"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                >
+                  Blog
+                </Link>
+                <Link
+                  href="/projects"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-white border-b-2 border-white transition-colors"
+                >
+                  Projects
+                </Link>
+                <Link
+                  href="/about"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                >
+                  About
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-2 sm:px-4 py-2 text-sm font-medium text-gray-400 hover:text-white transition-colors"
+                >
+                  Contact
+                </Link>
+              </div>
+            </div>
+
+            {/* Left scroll button */}
+            <div className="absolute left-1 top-1/2 transform -translate-y-1/2 sm:hidden">
+              <button className="p-1 hover:bg-gray-700 rounded">
+                <ChevronLeft size={16} className="text-gray-400" />
+              </button>
+            </div>
+
+            {/* Right scroll button */}
+            <div className="absolute right-1 top-1/2 transform -translate-y-1/2 sm:hidden">
+              <button className="p-1 hover:bg-gray-700 rounded">
+                <ChevronRight size={16} className="text-gray-400" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Page Title - with top margin to account for fixed header */}
+      <div className="pt-32 pb-2 px-8 md:px-16" style={{ paddingTop: '150px' }}>
+        <h1 className="text-[#D5CEA5] font-zen-antique text-7xl md:text-8xl lg:text-9xl xl:text-[8rem] leading-none">
           Work History
         </h1>
       </div>
@@ -46,7 +118,7 @@ export default function Projects() {
                 }}
               >
                 {/* Project Image */}
-                <div 
+                <div
                   className="bg-gray-300 relative overflow-hidden"
                   style={{
                     height: '350px',
