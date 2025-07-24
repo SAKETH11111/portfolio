@@ -18,9 +18,10 @@ const navItems: NavItem[] = [
 
 interface BrutalistNavigationProps {
   pageColor: 'about' | 'projects' | 'contact';
+  darkMode?: boolean;
 }
 
-export default function BrutalistNavigation({ pageColor }: BrutalistNavigationProps) {
+export default function BrutalistNavigation({ pageColor, darkMode = false }: BrutalistNavigationProps) {
   const pathname = usePathname();
   
   const getBgColor = () => {
@@ -37,7 +38,7 @@ export default function BrutalistNavigation({ pageColor }: BrutalistNavigationPr
 
   return (
     <nav className="brutalist-nav">
-      <div className={`brutalist-nav-container ${getBgColor()}`}>
+      <div className={`brutalist-nav-container ${darkMode ? 'bg-white' : getBgColor()} ${darkMode ? 'border-white' : ''}`}>
         <ul className="brutalist-nav-list">
           {navItems.map((item) => (
             <li key={item.href}>
@@ -45,7 +46,8 @@ export default function BrutalistNavigation({ pageColor }: BrutalistNavigationPr
                 href={item.href}
                 className={`
                   brutalist-nav-item
-                  ${pathname === item.href ? `brutalist-nav-item-active ${getActiveColor()}` : ''}
+                  ${darkMode ? 'text-black hover:bg-gray-100' : ''}
+                  ${pathname === item.href ? `brutalist-nav-item-active ${darkMode ? 'bg-gray-100' : getActiveColor()}` : ''}
                 `}
               >
                 {item.label}
