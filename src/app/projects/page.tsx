@@ -94,19 +94,18 @@ export default function Projects() {
           {/* Left Arrow */}
           <button
             onClick={handleLeftArrow}
-            className="fixed left-4 sm:left-6 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#D5CEA5] hover:bg-white border-4 border-[#D5CEA5] hover:border-white transition-all duration-300 flex items-center justify-center group"
+            className="fixed left-4 sm:left-6 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-30 p-4 hover:scale-110 transition-all duration-300 cursor-pointer"
             disabled={isAnimating}
           >
             <svg
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
-              className="group-hover:scale-110 transition-transform"
             >
               <path
                 d="M15 6L9 12L15 18"
-                stroke="black"
+                stroke="white"
                 strokeWidth="3"
                 strokeLinecap="square"
                 strokeLinejoin="miter"
@@ -238,19 +237,18 @@ export default function Projects() {
           {/* Right Arrow */}
           <button
             onClick={handleRightArrow}
-            className="fixed right-4 sm:right-6 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#D5CEA5] hover:bg-white border-4 border-[#D5CEA5] hover:border-white transition-all duration-300 flex items-center justify-center group"
+            className="fixed right-4 sm:right-6 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-30 p-4 hover:scale-110 transition-all duration-300 cursor-pointer"
             disabled={isAnimating}
           >
             <svg
-              width="24"
-              height="24"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
               fill="none"
-              className="group-hover:scale-110 transition-transform"
             >
               <path
                 d="M9 6L15 12L9 18"
-                stroke="black"
+                stroke="white"
                 strokeWidth="3"
                 strokeLinecap="square"
                 strokeLinejoin="miter"

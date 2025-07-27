@@ -10,7 +10,7 @@ interface SubstackNavigationProps {
 
 export default function SubstackNavigation({ currentPage = 'home', backgroundColor = 'transparent', textColor = 'text-gray-600' }: SubstackNavigationProps) {
   return (
-    <div className="fixed w-full top-4 z-50" style={{ backgroundColor }}>
+    <div className="fixed w-full top-8 z-50" style={{ backgroundColor }}>
       {/* Navigation Bar */}
       <div className="border-t border-b border-gray-200">
         <div className="h-12 px-1 flex items-center justify-center relative overflow-x-auto">

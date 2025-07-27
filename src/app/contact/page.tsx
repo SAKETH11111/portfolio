@@ -1,164 +1,140 @@
 import SubstackNavigation from '@/components/SubstackNavigation';
+import Image from 'next/image';
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[#F9F9AF]">
-      <SubstackNavigation currentPage="contact" />
+    <div className="min-h-screen bg-[#00011C] flex flex-col">
+      <SubstackNavigation currentPage="contact" textColor="text-white" />
+      
+      {/* Background fill for navbar area */}
+      <div className="h-[80px] bg-[#00011C]"></div>
 
-      <main className="px-4 sm:px-6 lg:px-8 pt-6">
-        <div className="max-w-4xl mx-auto">
+      {/* Hero Section */}
+      <div className="relative h-[25vh] min-h-[200px] flex items-center justify-center overflow-hidden flex-shrink-0">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/image.png"
+            alt="Contact background"
+            fill
+            sizes="100vw"
+            className="object-cover filter grayscale contrast-125"
+            priority
+          />
+        </div>
+        
+        {/* Hero Title */}
+        <h1 
+          className="relative z-10 font-light text-white text-center tracking-[-0.02em] font-zen-antique"
+          style={{ fontSize: '60px' }}
+        >
+          Get in touch
+        </h1>
+      </div>
 
-          {/* Header Section */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-4">
-              CONTACT
-            </h1>
-            <div className="w-24 h-1 bg-black mx-auto mb-6"></div>
-            <p className="text-xl text-gray-800 max-w-2xl mx-auto">
-              Let&apos;s connect and create something meaningful together
-            </p>
-          </div>
-
+      <main className="px-6 lg:px-8 flex-grow flex items-center justify-center pt-16">
+        <div className="max-w-[1200px] mx-auto w-full py-8">
           {/* Contact Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
             {/* Contact Information */}
-            <div className="space-y-8">
-              <div className="bg-white/30 backdrop-blur-sm border-2 border-black p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                <h2 className="text-2xl font-bold text-black mb-6">GET IN TOUCH</h2>
+            <div className="lg:col-span-1">
+              <div className="space-y-8">
+                <div>
+                  <h3 className="text-[20px] font-medium text-white mb-2 font-zen-antique">Email</h3>
+                  <a 
+                    href="mailto:tarannumrudaiba@gmail.com" 
+                    className="text-[18px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
+                  >
+                    tarannumrudaiba@gmail.com
+                  </a>
+                </div>
                 
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-black flex-shrink-0 mt-1"></div>
-                    <div>
-                      <h3 className="font-bold text-black">Email</h3>
-                      <a href="mailto:rudaiba@example.com" className="text-gray-800 hover:underline">
-                        rudaiba@example.com
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-black flex-shrink-0 mt-1"></div>
-                    <div>
-                      <h3 className="font-bold text-black">LinkedIn</h3>
-                      <a href="#" className="text-gray-800 hover:underline">
-                        linkedin.com/in/rudaibatarannum
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-black flex-shrink-0 mt-1"></div>
-                    <div>
-                      <h3 className="font-bold text-black">Twitter</h3>
-                      <a href="#" className="text-gray-800 hover:underline">
-                        @rudaibatarannum
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="w-6 h-6 bg-black flex-shrink-0 mt-1"></div>
-                    <div>
-                      <h3 className="font-bold text-black">Blog</h3>
-                      <a href="/blog" className="text-gray-800 hover:underline">
-                        Read my thoughts
-                      </a>
-                    </div>
-                  </div>
+                <div>
+                  <h3 className="text-[20px] font-medium text-white mb-2 font-zen-antique">LinkedIn</h3>
+                  <a 
+                    href="https://linkedin.com/in/rudaibatarannum" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[18px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
+                  >
+                    linkedin.com/in/rudaibatarannum
+                  </a>
+                </div>
+                
+                <div>
+                  <h3 className="text-[20px] font-medium text-white mb-2 font-zen-antique">Blog</h3>
+                  <a 
+                    href="https://rudaiba.substack.com/" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[18px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
+                  >
+                    rudaiba.substack.com
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white/30 backdrop-blur-sm border-2 border-black p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-              <h2 className="text-2xl font-bold text-black mb-6">SEND MESSAGE</h2>
+            <div className="lg:col-span-1">
               
-              <form className="space-y-6">
+              <form className="space-y-4">
                 <div>
-                  <label htmlFor="name" className="block text-black font-bold mb-2">
-                    NAME
-                  </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-4 py-3 border-2 border-black bg-white focus:outline-none focus:ring-0 focus:border-gray-600"
+                    placeholder="Name"
+                    className="w-full px-4 py-4 bg-transparent border-2 border-[#D5CEA5] text-white placeholder-[#6B7280] focus:outline-none focus:border-white transition-colors duration-300"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-black font-bold mb-2">
-                    EMAIL
-                  </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-3 border-2 border-black bg-white focus:outline-none focus:ring-0 focus:border-gray-600"
+                    placeholder="Email"
+                    className="w-full px-4 py-4 bg-transparent border-2 border-[#D5CEA5] text-white placeholder-[#6B7280] focus:outline-none focus:border-white transition-colors duration-300"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="subject" className="block text-black font-bold mb-2">
-                    SUBJECT
-                  </label>
                   <input
                     type="text"
                     id="subject"
                     name="subject"
-                    className="w-full px-4 py-3 border-2 border-black bg-white focus:outline-none focus:ring-0 focus:border-gray-600"
+                    placeholder="Subject"
+                    className="w-full px-4 py-4 bg-transparent border-2 border-[#D5CEA5] text-white placeholder-[#6B7280] focus:outline-none focus:border-white transition-colors duration-300"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="message" className="block text-black font-bold mb-2">
-                    MESSAGE
-                  </label>
                   <textarea
                     id="message"
                     name="message"
                     rows={6}
-                    className="w-full px-4 py-3 border-2 border-black bg-white focus:outline-none focus:ring-0 focus:border-gray-600 resize-none"
+                    placeholder="Message"
+                    className="w-full px-4 py-4 bg-transparent border-2 border-[#D5CEA5] text-white placeholder-[#6B7280] focus:outline-none focus:border-white transition-colors duration-300 resize-vertical min-h-[150px]"
                     required
                   ></textarea>
                 </div>
                 
-                <button
-                  type="submit"
-                  className="w-full bg-black text-white font-bold py-4 px-8 border-2 border-black hover:bg-white hover:text-black transition-colors duration-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-x-1 hover:-translate-y-1"
-                >
-                  SEND MESSAGE
-                </button>
+                <div className="flex justify-end mt-6">
+                  <button
+                    type="submit"
+                    className="px-12 py-4 bg-[#D5CEA5] text-[#00011C] border-2 border-[#D5CEA5] font-semibold text-base hover:bg-[#E5D9A7] hover:border-[#E5D9A7] transition-all duration-300 hover:-translate-y-0.5 cursor-pointer"
+                  >
+                    Send
+                  </button>
+                </div>
               </form>
             </div>
           </div>
 
-          {/* Call to Action */}
-          <div className="text-center bg-white/30 backdrop-blur-sm border-2 border-black p-8 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-            <h2 className="text-3xl font-bold text-black mb-4">LET&apos;S COLLABORATE</h2>
-            <p className="text-lg text-gray-800 mb-6 max-w-2xl mx-auto">
-              Whether you have a project in mind, want to discuss ideas, or just want to say hello, 
-              I&apos;d love to hear from you. Every great conversation starts with a simple message.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/projects"
-                className="inline-block bg-white text-black font-bold py-3 px-8 border-2 border-black hover:bg-black hover:text-white transition-colors duration-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-x-1 hover:-translate-y-1"
-              >
-                VIEW MY WORK
-              </a>
-              <a
-                href="/blog"
-                className="inline-block bg-white text-black font-bold py-3 px-8 border-2 border-black hover:bg-black hover:text-white transition-colors duration-200 shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform hover:-translate-x-1 hover:-translate-y-1"
-              >
-                READ MY THOUGHTS
-              </a>
-            </div>
-          </div>
         </div>
       </main>
     </div>
