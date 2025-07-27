@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Spectral } from "next/font/google";
 import "./globals.css";
+import { StagewiseToolbar } from "@stagewise/toolbar-next";
+import ReactPlugin from "@stagewise-plugins/react";
 
 const spectral = Spectral({
   variable: "--font-spectral",
@@ -32,6 +34,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft:wght@400&display=swap" rel="stylesheet" />
+        <StagewiseToolbar config={{ plugins: [ReactPlugin] }} />
         {children}
       </body>
     </html>

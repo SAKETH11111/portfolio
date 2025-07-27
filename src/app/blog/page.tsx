@@ -9,7 +9,7 @@ export default function BlogPage() {
       <SubstackNavigation currentPage="blog" />
 
       {/* Main Content - with top margin to account for fixed header */}
-      <div style={{ paddingTop: '120px' }}>
+      <div style={{ paddingTop: '90px' }}>
         {/* Substack-style Grid Layout */}
         <div className="max-w-7xl mx-auto px-3 sm:px-6 pt-6">
           {/* Main Grid Container - Five Up Layout with Dividers */}
@@ -228,6 +228,18 @@ export default function BlogPage() {
                 </div>
               </article>
             </div>
+          </div>
+
+          {/* Subscribe Button */}
+          <div className="flex justify-center my-12">
+            <Link 
+              href="https://rudaiba.substack.com/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-[#FF6719] text-white font-bold text-lg rounded-md hover:bg-[#E55A0D] transition-colors shadow-lg"
+            >
+              Subscribe to Rudaiba's Blogs
+            </Link>
           </div>
 
           {/* Divider */}

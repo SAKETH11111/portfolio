@@ -7,76 +7,93 @@ interface ProjectsNavigationProps {
 
 export default function ProjectsNavigation({ currentPage = 'projects' }: ProjectsNavigationProps) {
   return (
-    <div className="fixed w-full top-0 z-50 bg-[#B3D1E3] border-b-[3px] border-black">
+    <div className="fixed w-full top-4 z-50 bg-[#B3D1E3]">
+      {/* Top Bar */}
+      <div className="relative h-22 flex items-center justify-between px-2 sm:px-5 py-4">
+        {/* Logo Container */}
+        <div className="flex-1 flex-shrink-0">
+        </div>
+
+        {/* Title Container */}
+        <div className="flex-shrink-0 hidden sm:block">
+        </div>
+
+        {/* Buttons Container */}
+        <div className="flex-1 flex justify-end">
+        </div>
+      </div>
+
       {/* Navigation Bar */}
-      <div className="h-16 px-4 flex items-center justify-center relative overflow-x-auto">
-        <div className="flex items-center">
-          <div className="flex whitespace-nowrap">
-            <Link 
-              href="/" 
-              className={`px-6 py-3 text-lg font-bold transition-colors border-2 border-black mr-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] ${
-                currentPage === 'home' 
-                  ? 'bg-black text-white' 
-                  : 'bg-white text-black hover:bg-black hover:text-white'
-              }`}
-            >
-              HOME
-            </Link>
-            <Link 
-              href="/blog" 
-              className={`px-6 py-3 text-lg font-bold transition-colors border-2 border-black mr-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] ${
-                currentPage === 'blog' 
-                  ? 'bg-black text-white' 
-                  : 'bg-white text-black hover:bg-black hover:text-white'
-              }`}
-            >
-              BLOG
-            </Link>
-            <Link 
-              href="/projects" 
-              className={`px-6 py-3 text-lg font-bold transition-colors border-2 border-black mr-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] ${
-                currentPage === 'projects' 
-                  ? 'bg-black text-white' 
-                  : 'bg-white text-black hover:bg-black hover:text-white'
-              }`}
-            >
-              PROJECTS
-            </Link>
-            <Link 
-              href="/about" 
-              className={`px-6 py-3 text-lg font-bold transition-colors border-2 border-black mr-3 shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] ${
-                currentPage === 'about' 
-                  ? 'bg-black text-white' 
-                  : 'bg-white text-black hover:bg-black hover:text-white'
-              }`}
-            >
-              ABOUT
-            </Link>
-            <Link 
-              href="/contact" 
-              className={`px-6 py-3 text-lg font-bold transition-colors border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] ${
-                currentPage === 'contact' 
-                  ? 'bg-black text-white' 
-                  : 'bg-white text-black hover:bg-black hover:text-white'
-              }`}
-            >
-              CONTACT
-            </Link>
+      <div className="border-t border-b border-gray-200">
+        <div className="h-12 px-1 flex items-center justify-center relative overflow-x-auto">
+          <div className="flex items-center">
+            <div className="flex whitespace-nowrap">
+              <Link 
+                href="/" 
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'home' 
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                Home
+              </Link>
+              <Link 
+                href="/blog" 
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'blog' 
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                Blog
+              </Link>
+              <Link 
+                href="/projects" 
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'projects' 
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                Projects
+              </Link>
+              <Link 
+                href="/about" 
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'about' 
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                About
+              </Link>
+              <Link 
+                href="/contact" 
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'contact' 
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                Contact
+              </Link>
+            </div>
           </div>
-        </div>
-        
-        {/* Left scroll button */}
-        <div className="absolute left-2 top-1/2 transform -translate-y-1/2 sm:hidden">
-          <button className="p-2 bg-white border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white">
-            <ChevronLeft size={16} />
-          </button>
-        </div>
-        
-        {/* Right scroll button */}
-        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 sm:hidden">
-          <button className="p-2 bg-white border-2 border-black shadow-[3px_3px_0px_0px_rgba(0,0,0,1)] hover:bg-black hover:text-white">
-            <ChevronRight size={16} />
-          </button>
+          
+          {/* Left scroll button */}
+          <div className="absolute left-1 top-1/2 transform -translate-y-1/2 sm:hidden">
+            <button className="p-1 hover:bg-gray-100 rounded">
+              <ChevronLeft size={16} className="text-gray-600" />
+            </button>
+          </div>
+          
+          {/* Right scroll button */}  
+          <div className="absolute right-1 top-1/2 transform -translate-y-1/2 sm:hidden">
+            <button className="p-1 hover:bg-gray-100 rounded">
+              <ChevronRight size={16} className="text-gray-600" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
