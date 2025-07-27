@@ -238,7 +238,7 @@ export default function BlogPage() {
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#FF6719] text-white font-bold text-lg rounded-md hover:bg-[#E55A0D] transition-colors shadow-lg"
             >
-              Subscribe to Rudaiba's Blogs
+              Subscribe to Rudaiba&apos;s Blogs
             </Link>
           </div>
 
