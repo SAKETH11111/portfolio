@@ -2,7 +2,7 @@
 
 import SubstackNavigation from '@/components/SubstackNavigation';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function Projects() {
@@ -39,30 +39,43 @@ export default function Projects() {
     },
   ];
 
-  const [currentMiddleIndex, setCurrentMiddleIndex] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   const handleRightArrow = () => {
-    setCurrentMiddleIndex((prev) => (prev + 1) % projects.length);
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((prev) => (prev + 1) % projects.length);
   };
 
   const handleLeftArrow = () => {
-    setCurrentMiddleIndex((prev) => (prev - 1 + projects.length) % projects.length);
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrentIndex((prev) => (prev - 1 + projects.length) % projects.length);
   };
 
-  // Get the three visible cards based on current middle index
-  const getVisibleCards = () => {
-    const leftIndex = (currentMiddleIndex - 1 + projects.length) % projects.length;
-    const rightIndex = (currentMiddleIndex + 1) % projects.length;
+  useEffect(() => {
+    if (isAnimating) {
+      const timer = setTimeout(() => setIsAnimating(false), 700);
+      return () => clearTimeout(timer);
+    }
+  }, [isAnimating]);
+
+  // Get all cards positions
+  const getCardPosition = (index: number) => {
+    const diff = (index - currentIndex + projects.length) % projects.length;
     
-    return [
-      { ...projects[leftIndex], position: 'left' },
-      { ...projects[currentMiddleIndex], position: 'middle' },
-      { ...projects[rightIndex], position: 'right' }
-    ];
+    // Determine position based on circular distance
+    if (diff === 0) return 'middle';
+    if (diff === 1) return 'right';
+    if (diff === projects.length - 1) return 'left';
+    if (diff === 2) return 'far-right';
+    if (diff === projects.length - 2) return 'far-left';
+    return 'hidden';
   };
 
   return (
-    <div className="min-h-screen bg-[#00011C] flex flex-col">
+    <div className="min-h-screen bg-[#00011C] flex flex-col overflow-x-hidden">
       <SubstackNavigation currentPage="projects" textColor="text-white" />
 
       {/* Page Title - positioned below navbar */}
@@ -77,24 +90,50 @@ export default function Projects() {
 
       {/* Projects Container - Carousel with arrows */}
       <div className="flex-1 flex items-center justify-center pt-0 px-4 pb-4">
-        <div className="relative flex items-center justify-center w-full max-w-[1800px]">
+        <div className="relative flex items-center justify-center w-full max-w-[1400px]">
           {/* Left Arrow */}
           <button
             onClick={handleLeftArrow}
-            className="absolute left-4 z-20 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 backdrop-blur-sm"
+            className="fixed left-4 sm:left-6 md:left-8 lg:left-12 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#D5CEA5] hover:bg-white border-4 border-[#D5CEA5] hover:border-white transition-all duration-300 flex items-center justify-center group"
+            disabled={isAnimating}
           >
-            <ChevronLeft size={32} className="text-white" />
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="group-hover:scale-110 transition-transform"
+            >
+              <path
+                d="M15 6L9 12L15 18"
+                stroke="black"
+                strokeWidth="3"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+              />
+            </svg>
           </button>
 
           {/* Cards Container */}
-          <div className="flex gap-8 sm:gap-12 md:gap-16 lg:gap-20 items-center justify-center">
-            {getVisibleCards().map((project, index) => {
-              const isMiddle = project.position === 'middle';
+          <div className="relative flex items-center justify-center w-full h-[clamp(400px,60vh,680px)] py-8">
+            {projects.map((project, index) => {
+              const position = getCardPosition(index);
+              
+              // Define styles for each position
+              const positionStyles: Record<string, string> = {
+                'middle': 'translate-x-0 scale-110 z-20 opacity-100',
+                'left': '-translate-x-[110%] scale-90 z-10 opacity-100',
+                'right': 'translate-x-[110%] scale-90 z-10 opacity-100',
+                'far-left': '-translate-x-[230%] scale-75 z-0 opacity-0',
+                'far-right': 'translate-x-[230%] scale-75 z-0 opacity-0',
+                'hidden': 'translate-x-0 scale-50 z-0 opacity-0'
+              };
+              
               return (
                 <div
-                  key={`${project.id}-${currentMiddleIndex}`}
-                  className={`bg-white border-4 border-white flex flex-col transition-all duration-700 ease-in-out ${
-                    isMiddle ? 'scale-110 z-10 shadow-2xl' : 'scale-100'
+                  key={project.id}
+                  className={`absolute bg-white border-4 border-white flex flex-col transition-all duration-700 ease-in-out ${
+                    positionStyles[position] || positionStyles['hidden']
                   }`}
                   style={{
                     width: 'clamp(280px, 28vw, 520px)',
@@ -199,9 +238,24 @@ export default function Projects() {
           {/* Right Arrow */}
           <button
             onClick={handleRightArrow}
-            className="absolute right-4 z-20 p-3 bg-white/10 hover:bg-white/20 rounded-full transition-all duration-300 backdrop-blur-sm"
+            className="fixed right-4 sm:right-6 md:right-8 lg:right-12 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-[#D5CEA5] hover:bg-white border-4 border-[#D5CEA5] hover:border-white transition-all duration-300 flex items-center justify-center group"
+            disabled={isAnimating}
           >
-            <ChevronRight size={32} className="text-white" />
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="group-hover:scale-110 transition-transform"
+            >
+              <path
+                d="M9 6L15 12L9 18"
+                stroke="black"
+                strokeWidth="3"
+                strokeLinecap="square"
+                strokeLinejoin="miter"
+              />
+            </svg>
           </button>
         </div>
       </div>

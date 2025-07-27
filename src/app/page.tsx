@@ -22,7 +22,7 @@ export default function Home() {
         <div className="absolute border border-[#effdfa] border-solid inset-0 pointer-events-none" />
       </div>
 
-      <SubstackNavigation currentPage="home" />
+      <SubstackNavigation currentPage="home" textColor="text-white" />
 
       {/* Main Content */}
       <main className="relative z-10 flex items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8">
