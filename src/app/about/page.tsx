@@ -34,16 +34,12 @@ export default function About() {
 
             {/* Main heading */}
             <h2 className="text-black font-zen-antique text-6xl font-normal mb-12">
-              Hey hey, it&apos;s Rudaiba!
+              Greetings from Rudaiba!
             </h2>
 
             {/* Body text */}
             <p className="text-black font-spectral text-xl leading-relaxed mb-16">
-              So like, I really wanna have a para here telling about me, kinda
-              like an introduction (DEFINATELY NOT CAUSE i SAW IT ELSE
-              WHERE) but anyways, I don&apos;t really know what to write about
-              myself so I left it blank hoping y bujji will be kind enough to
-              write it later
+              I&apos;m a student from Bangladesh, and I really like cool things. From building a plutonium bomb to working on Savant syndrome or artificially recreating Savant syndrome - I like everything that&apos;s cool. I always have something weird going on in the back of my mind which sometimes doesn&apos;t even let me sleep. I love playing piano, working on creative things like art or sewing in my free time, or just binge-watching anime or Rotten Mango crime documentaries. There&apos;s always something strange floating around in my head, and honestly, that&apos;s just how I like it.
             </p>
 
             {/* Divider line */}
