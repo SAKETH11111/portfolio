@@ -4,38 +4,29 @@ import SubstackNavigation from '@/components/SubstackNavigation';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Projects() {
   const projects = [
     {
-      id: 1,
-      title: "Project Alpha",
-      subtitle: "Web Development",
-      image: "/images/sewing-room.jpg",
+      id: 'corbent',
+      title: "Corbent",
+      subtitle: "Direct Air Capture Technology",
+      image: "/images/hero-background.png",
+      description: "Container-sized 'carbon vacuums' that capture CO₂ from air using 90% less energy",
+      tag: "Climate Tech",
+      date: "2024",
+      status: "TKS Moonshot"
     },
     {
-      id: 2,
-      title: "Project Beta",
-      subtitle: "Mobile App",
-      image: "/images/sewing-room.jpg",
-    },
-    {
-      id: 3,
-      title: "Project Gamma",
-      subtitle: "Data Analysis",
-      image: "/images/sewing-room.jpg",
-    },
-    {
-      id: 4,
-      title: "Project Delta",
-      subtitle: "AI Research",
-      image: "/images/sewing-room.jpg",
-    },
-    {
-      id: 5,
-      title: "Project Epsilon",
-      subtitle: "Design System",
-      image: "/images/sewing-room.jpg",
+      id: 'microsoft-pcm',
+      title: "Microsoft PCM Challenge",
+      subtitle: "Data Center Cooling Solution",
+      image: "/images/hero-background.png",
+      description: "Phase Change Materials for improving energy efficiency in Microsoft data centers",
+      tag: "Energy Efficiency",
+      date: "2024",
+      status: "TKS Challenge"
     },
   ];
 
@@ -131,7 +122,7 @@ export default function Projects() {
               return (
                 <div
                   key={project.id}
-                  className={`absolute bg-white border-4 border-white flex flex-col transition-all duration-700 ease-in-out ${
+                  className={`absolute bg-white border-4 border-white flex flex-col transition-all duration-700 ease-in-out cursor-pointer hover:shadow-xl ${
                     positionStyles[position] || positionStyles['hidden']
                   }`}
                   style={{
@@ -146,88 +137,46 @@ export default function Projects() {
                       height: '50%',
                     }}
                   >
-                    <Image 
-                      src="/images/hero-background.png"
+                    <Image
+                      src={project.image}
                       alt={project.title}
                       fill
                       className="object-cover"
                     />
+                    {/* Tag overlay */}
+                    <div className="absolute top-4 left-4 bg-black text-white px-2 py-1 text-sm font-spectral">
+                      {project.tag}
+                    </div>
+                    {/* Status overlay */}
+                    <div className="absolute top-4 right-4 bg-[#D5CEA5] text-black px-2 py-1 text-sm font-spectral">
+                      {project.status}
+                    </div>
                   </div>
 
                   {/* Project Content */}
                   <div className="p-8 text-center flex flex-col justify-between bg-white flex-1">
-                    <div className="mb-6">
-                      <h2 className="text-black font-zen-antique mb-3 text-4xl">
+                    <div className="mb-4">
+                      <div className="text-gray-600 font-spectral text-sm mb-2">
+                        {project.date}
+                      </div>
+                      <h2 className="text-black font-zen-antique mb-3 text-3xl">
                         {project.title}
                       </h2>
-                      <p className="text-gray-700 font-spectral text-xl">
+                      <p className="text-gray-700 font-spectral text-lg mb-2">
                         {project.subtitle}
+                      </p>
+                      <p className="text-gray-600 font-spectral text-sm">
+                        {project.description}
                       </p>
                     </div>
 
-                    {/* Icon Links */}
-                    <div className="flex gap-6 justify-center mb-6">
-                      {/* Arrow Icon */}
-                      <button className="flex items-center justify-center hover:bg-gray-100 transition-colors w-14 h-14">
-                        <svg
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none"
-                        >
-                          <path
-                            d="M8 8L24 24M24 24V8M24 24H8"
-                            stroke="black"
-                            strokeWidth="3"
-                            strokeLinecap="square"
-                          />
-                        </svg>
-                      </button>
-
-                      {/* Document Icon */}
-                      <button className="flex items-center justify-center hover:bg-gray-100 transition-colors w-14 h-14">
-                        <svg
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none"
-                        >
-                          <rect
-                            x="6"
-                            y="6"
-                            width="20"
-                            height="20"
-                            stroke="black"
-                            strokeWidth="3"
-                            fill="none"
-                          />
-                          <rect x="10" y="12" width="12" height="2.5" fill="black" />
-                          <rect x="10" y="17" width="12" height="2.5" fill="black" />
-                        </svg>
-                      </button>
-
-                      {/* Menu Icon */}
-                      <button className="flex items-center justify-center hover:bg-gray-100 transition-colors w-14 h-14">
-                        <svg
-                          width="32"
-                          height="32"
-                          viewBox="0 0 32 32"
-                          fill="none"
-                        >
-                          <rect x="6" y="8" width="20" height="3" fill="black" />
-                          <rect x="6" y="14.5" width="20" height="3" fill="black" />
-                          <rect x="6" y="21" width="20" height="3" fill="black" />
-                        </svg>
-                      </button>
-                    </div>
-
                     {/* Read More Link */}
-                    <a
-                      href="#"
+                    <Link
+                      href={`/projects/${project.id}`}
                       className="text-black font-spectral underline hover:text-gray-700 transition-colors text-xl"
                     >
                       Read More
-                    </a>
+                    </Link>
                   </div>
                 </div>
               );
