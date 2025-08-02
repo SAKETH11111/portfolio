@@ -16,51 +16,51 @@ export default function SubstackNavigation({ currentPage = 'home', backgroundCol
         <div className="h-12 px-1 flex items-center justify-center relative overflow-x-auto">
           <div className="flex items-center">
             <div className="flex whitespace-nowrap">
-              <Link 
-                href="/" 
+              <Link
+                href="/"
                 className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
-                  currentPage === 'home' 
-                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}` 
+                  currentPage === 'home'
+                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}`
                     : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
                 }`}
               >
                 Home
               </Link>
-              <Link 
-                href="/blog" 
+              <Link
+                href="/about"
                 className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
-                  currentPage === 'blog' 
-                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}` 
-                    : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
-                }`}
-              >
-                Blog
-              </Link>
-              <Link 
-                href="/projects" 
-                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
-                  currentPage === 'projects' 
-                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}` 
-                    : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
-                }`}
-              >
-                Projects
-              </Link>
-              <Link 
-                href="/about" 
-                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
-                  currentPage === 'about' 
-                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}` 
+                  currentPage === 'about'
+                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}`
                     : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
                 }`}
               >
                 About
               </Link>
-              <Link 
-                href="/contact" 
+              <Link
+                href="/projects"
                 className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
-                  currentPage === 'contact' 
-                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}` 
+                  currentPage === 'projects'
+                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}`
+                    : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
+                }`}
+              >
+                Projects
+              </Link>
+              <Link
+                href="/blog"
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'blog'
+                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}`
+                    : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
+                }`}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                className={`px-2 sm:px-4 py-2 text-sm font-medium transition-colors ${
+                  currentPage === 'contact'
+                    ? `${textColor === 'text-white' ? 'text-white border-b-2 border-white' : 'text-gray-900 border-b-2 border-gray-900'}`
                     : `${textColor === 'text-white' ? 'text-white hover:text-gray-300' : 'text-gray-600 hover:text-gray-900'}`
                 }`}
               >

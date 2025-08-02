@@ -15,7 +15,7 @@ export default function Projects() {
       image: "/images/hero-background.png",
       description: "Container-sized 'carbon vacuums' that capture CO₂ from air using 90% less energy",
       tag: "Climate Tech",
-      date: "2024",
+      date: "2025",
       status: "TKS Moonshot"
     },
     {
@@ -27,6 +27,16 @@ export default function Projects() {
       tag: "Energy Efficiency",
       date: "2024",
       status: "TKS Challenge"
+    },
+    {
+      id: 'phosphor-solar',
+      title: "Phosphor Solar Research",
+      subtitle: "Enhanced Solar Panel Efficiency",
+      image: "/images/hero-background.png",
+      description: "Research on utilizing phosphor materials to create more efficient solar panels",
+      tag: "Solar Technology",
+      date: "2024",
+      status: "TKS Research"
     },
   ];
 
@@ -66,21 +76,21 @@ export default function Projects() {
   };
 
   return (
-    <div className="min-h-screen bg-[#00011C] flex flex-col overflow-x-hidden">
+    <div className="h-screen bg-[#00011C] flex flex-col overflow-hidden">
       <SubstackNavigation currentPage="projects" textColor="text-white" />
 
       {/* Page Title - positioned below navbar */}
-      <div className="px-8 md:px-16 pt-24 pb-0">
-        <h1 
+      <div className="px-8 md:px-16 pt-20 pb-0">
+        <h1
           className="text-[#D5CEA5] font-zen-antique leading-tight"
-          style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)' }}
+          style={{ fontSize: 'clamp(2rem, 6vw, 3.5rem)' }}
         >
           Work History
         </h1>
       </div>
 
       {/* Projects Container - Carousel with arrows */}
-      <div className="flex-1 flex items-center justify-center pt-0 px-4 pb-4">
+      <div className="flex-1 flex items-center justify-center pt-2 px-4 pb-4">
         <div className="relative flex items-center justify-center w-full max-w-[1400px]">
           {/* Left Arrow */}
           <button
