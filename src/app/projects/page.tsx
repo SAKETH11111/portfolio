@@ -20,7 +20,7 @@ export default function Projects() {
     },
     {
       id: 'microsoft-pcm',
-      title: "Microsoft PCM Challenge",
+      title: "Microsoft Winter Spring Challenge",
       subtitle: "Data Center Cooling Solution",
       image: "/images/hero-background.png",
       description: "Phase Change Materials for improving energy efficiency in Microsoft data centers",
@@ -32,11 +32,11 @@ export default function Projects() {
       id: 'phosphor-solar',
       title: "Phosphor Solar Research",
       subtitle: "Enhanced Solar Panel Efficiency",
-      image: "/images/hero-background.png",
-      description: "Research on utilizing phosphor materials to create more efficient solar panels",
+      image: "/images/solar-banner.jpg",
+      description: "A comprehensive research investigation into spectral conversion using phosphor materials for enhanced photovoltaic performance.",
       tag: "Solar Technology",
       date: "2025",
-      status: "TKS Research"
+      status: "CRF Research"
     },
   ];
 
