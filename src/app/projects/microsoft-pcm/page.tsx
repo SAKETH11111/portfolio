@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Microsoft PCM Challenge - Data Center Cooling | Rudaiba",
-  description: "Phase Change Materials for improving energy efficiency in Microsoft data centers - TKS Challenge project by Rudaiba",
+  title: "Microsoft Winter Spring Challenge - Data Center Cooling | Rudaiba",
+  description: "Phase Change Materials for improving energy efficiency in Microsoft data centers - Winter Spring Challenge project by Rudaiba",
   icons: {
     icon: '/images/png-png-urbanbrush-1733.jpg',
     shortcut: '/images/png-png-urbanbrush-1733.jpg',
@@ -33,11 +33,11 @@ export default function MicrosoftPCMProject() {
               </span>
               <span className="text-gray-400 font-spectral text-sm">2024</span>
             </div>
-            <h1 
+            <h1
               className="text-[#D5CEA5] font-zen-antique leading-tight mb-2"
               style={{ fontSize: 'clamp(1.8rem, 4vw, 2.8rem)' }}
             >
-              Microsoft PCM Challenge
+              Microsoft Winter Spring Challenge
             </h1>
             <p className="text-white font-spectral text-lg md:text-xl mb-2">
               Data Center Cooling Solution

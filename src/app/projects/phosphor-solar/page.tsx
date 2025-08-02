@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Phosphor Solar Research - Enhanced Efficiency | Rudaiba",
-  description: "Research on utilizing phosphor materials to create more efficient solar panels - TKS Research project by Rudaiba",
+  description: "Research on utilizing phosphor materials to create more efficient solar panels - CRF Research project by Rudaiba",
   icons: {
     icon: '/images/png-png-urbanbrush-1733.jpg',
     shortcut: '/images/png-png-urbanbrush-1733.jpg',
@@ -29,7 +29,7 @@ export default function PhosphorSolarProject() {
                 Solar Technology
               </span>
               <span className="bg-[#D5CEA5] text-black px-2 py-1 text-xs font-spectral rounded">
-                TKS Research
+                CRF Research
               </span>
               <span className="text-gray-400 font-spectral text-sm">2025</span>
             </div>
