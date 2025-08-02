@@ -35,7 +35,7 @@ export default function Projects() {
       image: "/images/hero-background.png",
       description: "Research on utilizing phosphor materials to create more efficient solar panels",
       tag: "Solar Technology",
-      date: "2024",
+      date: "2025",
       status: "TKS Research"
     },
   ];

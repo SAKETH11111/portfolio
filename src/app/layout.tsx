@@ -20,8 +20,11 @@ export const metadata: Metadata = {
   title: "Rudaiba - Portfolio",
   description: "Portfolio of Rudaiba",
   icons: {
-    icon: '/images/png-png-urbanbrush-1733.jpg',
-    shortcut: '/images/png-png-urbanbrush-1733.jpg',
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/images/png-png-urbanbrush-1733.jpg', type: 'image/jpeg' }
+    ],
+    shortcut: '/favicon.ico',
     apple: '/images/png-png-urbanbrush-1733.jpg',
   },
 };
@@ -33,6 +36,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/images/png-png-urbanbrush-1733.jpg" type="image/jpeg" />
+        <link rel="apple-touch-icon" href="/images/png-png-urbanbrush-1733.jpg" />
+      </head>
       <body
         className={`${spectral.variable} antialiased`}
         suppressHydrationWarning

@@ -31,7 +31,7 @@ export default function PhosphorSolarProject() {
               <span className="bg-[#D5CEA5] text-black px-2 py-1 text-xs font-spectral rounded">
                 TKS Research
               </span>
-              <span className="text-gray-400 font-spectral text-sm">2024</span>
+              <span className="text-gray-400 font-spectral text-sm">2025</span>
             </div>
             <h1 
               className="text-[#D5CEA5] font-zen-antique leading-tight mb-2"

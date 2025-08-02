@@ -37,19 +37,19 @@ export default function About() {
 
         {/* Right Section */}
         <div className="w-[65%] flex items-center justify-center h-full" style={{ backgroundColor: '#EFFDFA' }}>
-          <div className="w-full px-8 md:px-16 py-4">
+          <div className="w-full px-8 md:px-16 py-4 mt-32">
             {/* Subtitle */}
-            <p className="text-black font-spectral text-lg md:text-xl mb-2 md:mb-4">
+            <p className="text-black font-spectral text-sm md:text-base mb-2 md:mb-3">
               A thread of thought, pulled gently into form
             </p>
 
             {/* Main heading */}
-            <h2 className="text-black font-zen-antique font-normal mb-4 md:mb-8" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)' }}>
+            <h2 className="text-black font-zen-antique font-normal mb-3 md:mb-4" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.5rem)' }}>
               Greetings from Rudaiba!
             </h2>
 
             {/* Body text */}
-            <p className="text-black font-spectral leading-relaxed mb-4 md:mb-8" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.25rem)' }}>
+            <p className="text-black font-spectral leading-relaxed mb-3 md:mb-4" style={{ fontSize: 'clamp(0.875rem, 1.2vw, 1rem)' }}>
               I&apos;m a student from Bangladesh, and I really like cool things. From building a plutonium bomb to working on Savant syndrome or artificially recreating Savant syndrome - I like everything that&apos;s cool. I always have something weird going on in the back of my mind which sometimes doesn&apos;t even let me sleep. I love playing piano, working on creative things like art or sewing in my free time, or just binge-watching anime or Rotten Mango crime documentaries. There&apos;s always something strange floating around in my head, and honestly, that&apos;s just how I like it.
             </p>
 

@@ -59,14 +59,14 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen bg-[#00011C] flex flex-col">
+    <div className="h-screen bg-[#00011C] flex flex-col overflow-hidden">
       <SubstackNavigation currentPage="contact" textColor="text-white" />
       
       {/* Background fill for navbar area */}
-      <div className="h-[80px] bg-[#00011C]"></div>
+      <div className="h-[80px] bg-[#00011C] flex-shrink-0"></div>
 
       {/* Hero Section */}
-      <div className="relative h-[25vh] min-h-[200px] flex items-center justify-center overflow-hidden flex-shrink-0">
+      <div className="relative h-[20vh] min-h-[120px] flex items-center justify-center overflow-hidden flex-shrink-0">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -80,50 +80,50 @@ export default function Contact() {
         </div>
         
         {/* Hero Title */}
-        <h1 
+        <h1
           className="relative z-10 font-light text-white text-center tracking-[-0.02em] font-zen-antique"
-          style={{ fontSize: '60px' }}
+          style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)' }}
         >
           Get in touch
         </h1>
       </div>
 
-      <main className="px-6 lg:px-8 flex-grow flex items-center justify-center pt-16">
-        <div className="max-w-[1200px] mx-auto w-full py-8">
+      <main className="px-4 lg:px-6 flex-1 flex items-center justify-center py-2 min-h-0">
+        <div className="max-w-[1000px] mx-auto w-full py-2">
           {/* Contact Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-32">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16">
             {/* Contact Information */}
             <div className="lg:col-span-1">
-              <div className="space-y-8">
+              <div className="space-y-4">
                 <div>
-                  <h3 className="text-[20px] font-medium text-white mb-2 font-zen-antique">Email</h3>
-                  <a 
-                    href="mailto:tarannumrudaiba@gmail.com" 
-                    className="text-[18px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
+                  <h3 className="text-[16px] font-medium text-white mb-1 font-zen-antique">Email</h3>
+                  <a
+                    href="mailto:tarannumrudaiba@gmail.com"
+                    className="text-[14px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
                   >
                     tarannumrudaiba@gmail.com
                   </a>
                 </div>
                 
                 <div>
-                  <h3 className="text-[20px] font-medium text-white mb-2 font-zen-antique">LinkedIn</h3>
-                  <a 
-                    href="https://linkedin.com/in/rudaibatarannum" 
+                  <h3 className="text-[16px] font-medium text-white mb-1 font-zen-antique">LinkedIn</h3>
+                  <a
+                    href="https://linkedin.com/in/rudaibatarannum"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[18px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
+                    className="text-[14px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
                   >
                     linkedin.com/in/rudaibatarannum
                   </a>
                 </div>
                 
                 <div>
-                  <h3 className="text-[20px] font-medium text-white mb-2 font-zen-antique">Blog</h3>
-                  <a 
-                    href="https://rudaiba.substack.com/" 
+                  <h3 className="text-[16px] font-medium text-white mb-1 font-zen-antique">Blog</h3>
+                  <a
+                    href="https://rudaiba.substack.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[18px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
+                    className="text-[14px] text-[#B8BCC8] hover:text-white transition-colors duration-300 underline font-zen-antique"
                   >
                     rudaiba.substack.com
                   </a>
@@ -134,7 +134,7 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="lg:col-span-1">
               
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3">
                 <div>
                   <input
                     type="text"
