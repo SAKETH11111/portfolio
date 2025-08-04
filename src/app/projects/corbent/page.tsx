@@ -64,7 +64,7 @@ export default function CorbentProject() {
               Turning Air into Stone
             </h2>
             <p className="text-gray-300 font-spectral text-lg leading-relaxed mb-6">
-              Corbent is developing container-sized "carbon vacuums" that capture CO₂ directly from the air using 90% less energy than conventional direct air capture methods. Our breakthrough technology combines advanced Metal-Organic Frameworks (MOFs) with an innovative electro-swing adsorption process to make large-scale atmospheric carbon removal economically viable.
+              Corbent is developing container-sized &ldquo;carbon vacuums&rdquo; that capture CO₂ directly from the air using 90% less energy than conventional direct air capture methods. Our breakthrough technology combines advanced Metal-Organic Frameworks (MOFs) with an innovative electro-swing adsorption process to make large-scale atmospheric carbon removal economically viable.
             </p>
           </section>
 

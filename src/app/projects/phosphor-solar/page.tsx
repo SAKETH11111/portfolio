@@ -116,8 +116,8 @@ export default function PhosphorSolarProject() {
                   <p>An analysis was conducted to identify the top 10 phosphors across three key metrics: T50 (Lifespan), EQE (External Quantum Efficiency), and IQE (Internal Quantum Efficiency). The analysis revealed no single phosphor that ranked in the top 10 across all three categories, or even in two of the three. However, expanding the analysis to the top 20 revealed five key overlaps:</p>
                   <InfoBox title="Key Overlaps in Top 20" variant="yellow">
                       <ul className="list-disc pl-5 space-y-2">
-                          <li><strong>T50 & IQE Overlap:</strong> Found robust candidates like "Rb2PO8MoEu1" and "Ba3P2O8Eu1" that are ideal for high-durability applications.</li>
-                          <li><strong>T50 & EQE Overlap:</strong> Identified "KMg4P3O12Li0.025Eu0.02" as a rare candidate with excellent overall light emission, making it a strong contender for applications valuing brightness.</li>
+                          <li><strong>T50 & IQE Overlap:</strong> Found robust candidates like &ldquo;Rb2PO8MoEu1&rdquo; and &ldquo;Ba3P2O8Eu1&rdquo; that are ideal for high-durability applications.</li>
+                          <li><strong>T50 & EQE Overlap:</strong> Identified &ldquo;KMg4P3O12Li0.025Eu0.02&rdquo; as a rare candidate with excellent overall light emission, making it a strong contender for applications valuing brightness.</li>
                           <li><strong>IQE & EQE Overlap:</strong> No overlap found.</li>
                       </ul>
                   </InfoBox>

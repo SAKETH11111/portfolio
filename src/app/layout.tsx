@@ -40,13 +40,13 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/images/png-png-urbanbrush-1733.jpg" type="image/jpeg" />
         <link rel="apple-touch-icon" href="/images/png-png-urbanbrush-1733.jpg" />
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft:wght@400&display=swap" rel="stylesheet" />
       </head>
       <body
         className={`${spectral.variable} antialiased`}
         suppressHydrationWarning
         style={{ cursor: 'none' }}
       >
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Antique+Soft:wght@400&display=swap" rel="stylesheet" />
         <CustomCursor />
         {children}
       </body>
