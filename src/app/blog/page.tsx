@@ -162,24 +162,6 @@ export default function BlogPage() {
                     <div className="text-xs text-gray-500 uppercase tracking-wider mb-2">
                       <time>Jun 19</time> • <span>Rudaiba Tarannum</span>
                     </div>
-                    <div className="flex justify-center gap-3">
-                      <span className="flex items-center gap-1 text-sm text-gray-500 hover:text-red-500 transition-colors text-red-500">
-                        <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                        </svg>
-                        <span>1</span>
-                      </span>
-                      <span className="flex items-center gap-1 text-sm text-gray-500 hover:text-blue-500 transition-colors">
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                        </svg>
-                      </span>
-                      <span className="flex items-center gap-1 text-sm text-gray-500 hover:text-green-500 transition-colors">
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8m-6-4l-4-4m0 0L8 6m4-4v12" />
-                        </svg>
-                      </span>
-                    </div>
                   </div>
                 </div>
               </article>
@@ -285,9 +267,6 @@ export default function BlogPage() {
           <div className="mb-8">
             <div className="flex justify-between items-center mb-6">
               <h2 className="text-lg font-semibold text-gray-900 font-system">Most Popular</h2>
-              <Link href="/archive?sort=top" className="text-xs text-gray-500 uppercase tracking-wider hover:text-gray-700">
-                View all
-              </Link>
             </div>
 
             {/* Popular Posts Grid */}
@@ -319,25 +298,6 @@ export default function BlogPage() {
                       />
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-500 mt-2">
-                    <span className="flex items-center gap-1 hover:text-red-500 transition-colors text-red-500">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                      </svg>
-                      <span>5</span>
-                    </span>
-                    <span className="flex items-center gap-1 hover:text-blue-500 transition-colors">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                      </svg>
-                      <span>4</span>
-                    </span>
-                    <span className="flex items-center gap-1 hover:text-green-500 transition-colors">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8m-6-4l-4-4m0 0L8 6m4-4v12" />
-                      </svg>
-                    </span>
-                  </div>
                 </article>
               </Link>
 
@@ -367,24 +327,6 @@ export default function BlogPage() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                  </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-500 mt-2">
-                    <span className="flex items-center gap-1 hover:text-red-500 transition-colors text-red-500">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                      </svg>
-                      <span>3</span>
-                    </span>
-                    <span className="flex items-center gap-1 hover:text-blue-500 transition-colors">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                      </svg>
-                    </span>
-                    <span className="flex items-center gap-1 hover:text-green-500 transition-colors">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8m-6-4l-4-4m0 0L8 6m4-4v12" />
-                      </svg>
-                    </span>
                   </div>
                 </article>
               </Link>
@@ -416,24 +358,6 @@ export default function BlogPage() {
                       />
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 text-sm text-gray-500 mt-2">
-                    <span className="flex items-center gap-1 hover:text-red-500 transition-colors text-red-500">
-                      <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                      </svg>
-                      <span>4</span>
-                    </span>
-                    <span className="flex items-center gap-1 hover:text-blue-500 transition-colors">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                      </svg>
-                    </span>
-                    <span className="flex items-center gap-1 hover:text-green-500 transition-colors">
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8m-6-4l-4-4m0 0L8 6m4-4v12" />
-                      </svg>
-                    </span>
-                  </div>
                 </article>
               </Link>
 
@@ -457,25 +381,6 @@ export default function BlogPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                </div>
-                <div className="flex items-center gap-3 text-sm text-gray-500 mt-2">
-                  <span className="flex items-center gap-1 hover:text-red-500 transition-colors text-red-500">
-                    <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
-                    </svg>
-                    <span>3</span>
-                  </span>
-                  <span className="flex items-center gap-1 hover:text-blue-500 transition-colors">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" />
-                    </svg>
-                    <span>2</span>
-                  </span>
-                  <span className="flex items-center gap-1 hover:text-green-500 transition-colors">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8m-6-4l-4-4m0 0L8 6m4-4v12" />
-                    </svg>
-                  </span>
                 </div>
               </article>
             </div>
